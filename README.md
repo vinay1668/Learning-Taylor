@@ -8,6 +8,22 @@
    )
 )
 ```
+2.Modulo operation function(mod)
+```
+(def! mod (fn* (a b) 
+    (println     (- a (number(* b (number(/ a b)) ) ) ) )
+  ))  
+```
+3.Getting absolute value of a variable (abs)
+```
+(def! abs (fn* (num)
+      (if (< num 0)
+         (println "The absolute value of a is " (* num -1))
+         (println "The absolute value of a is " num)
+        
+      )
+   ))
+```
 
 ## Examples
 1.A Simple button that change the text to pre-defined value or string.
@@ -217,4 +233,45 @@
           ))
         }"convert")>
  ```
- 
+ 9. Example for modulo operation
+ ```
+ ::Text[inputNumber:  @v]{label="input"}
+::Text[inputNumber1:  @v]{label="input1"}
+::Text[result:  @v]{label="result"}
+<inputtry: (react-input {
+                        "placeholder" "Enter the Value " 
+                        "onChange" (fn*(val) (do
+                        (set-state "changedInput" val)
+                        ))
+})
+>
+<inputtry1: (react-input {
+                        "placeholder" "Enter the Value " 
+                        "onChange" (fn*(val) (do
+                        (set-state "changedInput1" val)
+                        ))
+})
+>
+<console: (
+(def! mod (fn* (a b) 
+    (do
+    (println     (- a (number(* b (number(/ a b)) ) ) ) )
+     (set-state "result"   (- a (number(* b (number(/ a b)) ) ) )    )
+  ))  )
+)>
+<buttontry:(react-button{ "style"{
+                                 "margin" "50px"
+                                 }
+         "onClick" (fn*()  
+         (let*(
+                  val  ( number(get-state "changedInput") )
+                  val1  ( number(get-state "changedInput1") )
+         )
+         (do
+                (set-state "input"  (get-state "changedInput") )  
+                (set-state "input1"  (get-state "changedInput1") )
+                (mod val val1 )
+         )
+         ))
+       }"convert")>
+ ```
