@@ -1,5 +1,15 @@
 # Learning-Taylor
 
+## Basic functions
+1.square root function (sqrt)
+```
+(def! sqrt (fn* (num)
+      ( println (* num num) )
+   )
+)
+```
+
+## Examples
 1.A Simple button that change the text to pre-defined value or string.
 
 ```
