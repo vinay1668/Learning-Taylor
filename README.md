@@ -117,6 +117,94 @@
           )
         }"button")>
   ```
-                    
-                 
+  
+  6.Example:Celsius to Fahrenheit(There is  a problem ,the result is wrong)
+  ```
+  ::Text[celsius value:  @v]{label="outputOne"}
+::Text[result:  @v]{label="result"}
+<inputtry: (react-input {
+                         "placeholder" "Enter the Celsuis Value " 
+                         "onChange" (fn*(val) (do
+                         (set-state "changedInput" val)
+                         ))
+})
+>
+<buttontry:(react-button{ "style"{
+                                  "margin" "50px"
+                                  }
+          "onClick" (fn*()
+          (do
+                 (set-state "result"   (+ (* (number (get-state "changedInput")) 1.8) 32)       )
+                 (set-state "outputOne"  (get-state "changedInput") )  
+          )
+          )
+        }"convert")>
+        
+  ````
+  7.The same above function but using println(console logging) and variables
+  
+  ```
+  ::Text[celsius value:  @v]{label="celsius"}
+::Text[result:  @v]{label="result"}
+<inputtry: (react-input {
+                         "placeholder" "Enter the Celsuis Value " 
+                         "onChange" (fn*(val) (do
+                         (set-state "changedInput" val)
+                         ))
+})
+>
+<buttontry:(react-button{ "style"{
+                                  "margin" "50px"
+                                  }
+          "onClick" (fn*()  
+          (let*(
+               celsius (number(get-state "changedInput"))
+               frah ( +(* celsius 1.8 ) 32)
+          )
+          (do
+                 (set-state "celsius"  (get-state "changedInput") )  
+                 (println  celsius "degree celsius is equal to" frah "degree fahrenheit."  )
+          )
+          )
+          )
+        }"convert")>
+        
+      
+
+  
+         
+
+  ````
+ 8.Calculating square root using sqrt funtion
+ ```
+ ::Text[inputNumber:  @v]{label="input"}
+::Text[result:  @v]{label="result"}
+<inputtry: (react-input {
+                         "placeholder" "Enter the Value " 
+                         "onChange" (fn*(val) (do
+                         (set-state "changedInput" val)
+                         ))
+})
+>
+<console: (
+(def! sqrt (fn* (num) 
+     (do
+      (println(* num num ))
+      (set-state "result" (* num num))
+   ))  )
+)>
+<buttontry:(react-button{ "style"{
+                                  "margin" "50px"
+                                  }
+          "onClick" (fn*()  
+          (let*(
+                   val  ( number(get-state "changedInput") )
+          )
+          (do
+                 (set-state "input"  (get-state "changedInput") )  
+                 (sqrt val )
+          )
+          ))
+        }"convert")>
+ ```
  
