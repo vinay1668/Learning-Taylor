@@ -24,6 +24,15 @@
       )
    ))
 ```
+4.function to check if two number are equal or not.
+```
+(def! check (fn* (a b)
+      (if (= a b)
+            (println "The numbers are equal")
+              (println "The numbers are not equal")  
+)
+   ))
+```
 
 ## Examples
 1.A Simple button that change the text to pre-defined value or string.
