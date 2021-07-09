@@ -359,6 +359,105 @@
 
  ```
  
+ 12.Button toggling with the design
+ 
+ ```
+ 
+
+<initialColor:( (fn* () (do 
+       (set-state "color" "blue")
+       (set-state "color1" "blue")
+       (set-state "message" "click the below button ....")
+       )
+       )
+)>
+
+
+
+
+<globalstyles:(set-style {
+"MarkdownPreview" {
+   "background" "white"
+   }})>
+
+<consoleLogging: (def! log (fn*()
+     (println "worked")
+  ))
+>
+
+<inputtry:(watch
+["message"],
+(fn* ()
+(react-text  { "style" {
+                                 "width" 400
+                                 "height" 120
+                                 "margin" "50px"
+                                 "marginLeft" "150px"
+                                  "backgroundColor" "#DDDDDD"
+                                  "borderRadius" 10
+                                  "color" "black"
+                                  "fontFamily" "cursive"
+                                  "padding" 10
+}
+                     
+}
+ (get-state "message"))) )>
+ 
+<buttontry:(watch
+["color1" "color"],
+   (fn* () 
+   (react-div {} (list 
+   (react-button{ "style"{
+                               "className" "btn btn-primary"
+                               "width" 100 
+                               "height" 40
+                               "margin" "10px"
+                               "marginLeft" "180px"
+                               "fontFamily" "cursive"
+                               "backgroundColor" (get-state "color")
+                               }
+         "onMouseOver" (fn*() 
+         (set-state "color" "#185ADB") 
+         ) 
+         "onMouseOut" (fn* () 
+         (set-state "color" "blue")
+         )
+       "onClick" (fn*() (do
+          (println (get-state "message") )
+          (set-state  "message"   "Hello world!! I am trying to learn Taylor.
+Taylor is a lisp like functional language.With Taylor you can build amazing marks.It is very easy to implement stuff on top of Taylor." )
+       ))
+     }"click me")
+     (react-button{ "style"{
+                               "className" "btn btn-primary"
+                               "width" 100 
+                               "height" 40
+                               "margin" "10px"
+                               "marginLeft" "180px"
+                               "fontFamily" "cursive"
+                               "backgroundColor" (get-state "color1")
+                               }
+         "onMouseOver" (fn*() 
+         (set-state "color1" "#185ADB") 
+         ) 
+         "onMouseOut" (fn* () 
+         (set-state "color1" "blue")
+         )
+       "onClick" (fn*() (do
+          (println (get-state "message") )
+          (set-state  "message"   "click the below button ..." )
+       ))
+     }"reset")
+     
+     
+     
+     
+))))>
+
+
+
+ ```
+ 
  
  
  
