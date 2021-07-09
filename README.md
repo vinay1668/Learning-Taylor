@@ -284,3 +284,50 @@
          ))
        }"convert")>
  ```
+ 
+ 10.Changing the background color of a button on Click.
+ ```
+ 
+
+<globalstyles:(set-style {
+	"MarkdownPreview" {
+    	"background" "white"
+    }})>
+
+<initialColor:(set-state "color" "green")>
+<buttontry:(watch
+	["color"],
+    (fn* () 
+    (react-button{ "style"{
+                                "className" "btn btn-primary"
+                                "width" 100 
+                                "height" 40
+                                "margin" "50px"
+                                "fontFamily" "cursive"
+                                "backgroundColor" (get-state "color")
+                                }
+        "onClick" (fn*() 
+        (do
+         (if (= (get-state "color") "yellow" ) 
+             (set-state "color" "blue")
+             (set-state "color" "yellow")
+         )
+        )
+        )
+      }"click me")
+))>
+               
+
+ ```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
