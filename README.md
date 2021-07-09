@@ -319,7 +319,45 @@
                
 
  ```
+ 11.Changing the color of the button on hover
  
+ ```
+ 
+
+<globalstyles:(set-style {
+"MarkdownPreview" {
+    "background" "white"
+    }})>
+
+<initialColor:(set-state "color" "blue")>
+<consoleLogging: (def! log (fn*()
+      (println "worked")
+   ))
+>
+<buttontry:(watch
+["color"],
+    (fn* () 
+    (react-button{ "style"{
+                                "className" "btn btn-primary"
+                                "width" 100 
+                                "height" 40
+                                "margin" "50px"
+                                "fontFamily" "cursive"
+                                "backgroundColor" (get-state "color")
+                                }
+          "onMouseOver" (fn*() 
+          (set-state "color" "#185ADB") 
+          ) 
+          "onMouseOut" (fn* () 
+          (set-state "color" "blue")
+          )
+        "onClick" (fn*() 
+        )
+      }"click me")
+))>
+               
+
+ ```
  
  
  
