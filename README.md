@@ -458,7 +458,39 @@ Taylor is a lisp like functional language.With Taylor you can build amazing mark
 
  ```
  
- 
+13.Submitting the file to IPFS.
+```
+
+<setstyle:(let* (
+        colorDefault "blue"
+        colorHover "#185ADB"
+    )
+    (set-style {
+        "commonStyle" {
+            "color" "white"
+            "font-family" "cursive"
+            "background-color" colorDefault
+        }
+        "commonStyle:hover" {
+            "background-color" colorHover
+        }
+        "fileInput" {
+            "margin" "20px"
+            "width" "250px" 
+        }
+        "fileInputBtn" {
+            "margin" "20"
+        }
+    })
+)>
+
+::Input[]{class="fileInput commonStyle" placeholder="string" label="fileProof" type="file" width="220px"}
+::Button[submit]{class="fileInputBtn commonStyle" command="ipfs-set-file" input="fileProof_files" output="fileIpfsHash"}
+
+:br[]{}
+
+::Link[The link is: @path]{label=fileIpfsHash src="https://ipfs.io/ipfs/@path"}
+```
  
  
  
