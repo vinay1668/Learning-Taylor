@@ -2,6 +2,10 @@
 
 ### Diary Mark
 ```
+
+
+
+
 <initialColor:( (fn* () (do 
        (set-state "colorChange" "blue")
        (set-state "getColorChange" "yellow")
@@ -35,13 +39,14 @@
 ["colorChange"],
 (fn* ()
 (react-input {"type" "date"
-                       "placeholder" "choose files ....."
                        "style" {
                         "margin" "20px"
                         "color" "white"
                         "fontFamily" "cursive"
                         "backgroundColor" (get-state "colorChange")
-                        "width" "250px" 
+                        "width" "500px"
+                        "height" "40px"
+                        "fontSize" "20px"
                        }
           "onMouseOver" (fn*()
          (set-state "colorChange" "#185ADB") 
@@ -99,16 +104,17 @@
 
 <uniqueid2:(react-text { "style" {
                                               "margin" "0px"
+                                              "marginTop" "10px"
                                               "color" "black"
                                                "fontFamily" "cursive"
-                                               "fontSize" "20px"
+                                               "fontSize" "30px"
                                                   }} "How is your day? : ")>
 <inputtry:(watch
 [],
 (fn* ()
 (react-textarea  { "placeholder" "Dear Diary ....."
                "style" {
-                                 "width" 400
+                                 "width" 500
                                  "height" 140
                                  "margin" "20px"
                                  "marginLeft" "10px"
@@ -161,7 +167,7 @@
                                               "margin" "0px"
                                               "color" "black"
                                                "fontFamily" "cursive"
-                                               "fontSize" "20px"
+                                               "fontSize" "30px"
                                                   }} "Choose Image : ")>
 <uniqueid45:(watch 
 ["color2" "color3"],
@@ -170,6 +176,9 @@
 react-button { "style" { 
                  "margin" "20"
                   "color" "white"
+                  "fontSize" "20px"
+                  "width" 100
+                  "height" "40px"
                   "fontFamily" "cursive"
                   "backgroundColor" ( get-state "color2")
         }
@@ -195,7 +204,9 @@ react-button { "style" {
                         "color" "white"
                         "fontFamily" "cursive"
                         "backgroundColor" (get-state "color3")
-                        "width" "250px" 
+                        "width" "400px" 
+                  "fontSize" "20px"
+                  "height" "40px"
                        }
         "onChange" (fn* (files) ( do 
             (log files "--files")
@@ -231,7 +242,7 @@ react-button { "style" {
                                               "margin" "0px"
                                               "color" "black"
                                                "fontFamily" "cursive"
-                                               "fontSize" "20px"
+                                               "fontSize" "30px"
                                                   }} "Choose Video: ")>
 <uniqueid46:(watch 
 ["color4" "color5"],
@@ -242,6 +253,9 @@ react-button { "style" {
                   "color" "white"
                   "fontFamily" "cursive"
                   "backgroundColor" ( get-state "color4")
+                                    "fontSize" "20px"
+                  "width" 100
+                  "height" "40px"
         }
           "onMouseOver" (fn*() 
          (set-state "color4" "#185ADB") 
@@ -265,7 +279,9 @@ react-button { "style" {
                         "color" "white"
                         "fontFamily" "cursive"
                         "backgroundColor" (get-state "color5")
-                        "width" "250px" 
+                   "width" "400px" 
+                  "fontSize" "20px"
+                  "height" "40px"
                        }
         "onChange" (fn* (files) ( do 
             (log files "--files")
@@ -296,6 +312,33 @@ react-button { "style" {
 ::Contract[]{name="Diary" function="getDetialsByDate" input="getByDate" output="result"}
 
 ::Text[Result: @v]{label="result"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 
