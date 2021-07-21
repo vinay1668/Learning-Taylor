@@ -6,6 +6,8 @@
 
 
 
+
+
 <initialColor:( (fn* () (do 
        (set-state "colorChange" "blue")
        (set-state "getColorChange" "yellow")
@@ -24,9 +26,21 @@
        )
        )
 )>
+<Heading:(react-text {  "style" {
+                                              "margin" 0
+                                              "marginTop" "0px"
+                                              "color" "#283149"
+                                               "fontWeight" "bold"
+                                               "fontSize" "70px"
+                                               "fontFamily" "cursive"
+                                               "textAlign" "center"
+                                                  }} "Diary Daap")>
+                                                  
+
 
 <uniqueid1:(react-text {  "style" {
-                                              "margin" "0px"
+                                              "margin" 0
+                                              "marginTop" "0px"
                                               "color" "black"
                                                "fontFamily" "cursive"
                                                "fontSize" "30px"
@@ -91,7 +105,7 @@
 <globalstyles:(set-style {
 "MarkdownPreview" {
    "background" "white"
-   "background-image" "url('https://64.media.tumblr.com/be08b4534607b0cee68957ccb99ff2ab/tumblr_otgj5n61xI1udszxdo1_500.png ')"
+   "background-image" "url('https://ak.picdn.net/shutterstock/videos/1039937252/thumb/1.jpg ')"
    "background-position" "center"
    "background-repeat" "no-repeat"
    "background-size" "cover"
@@ -312,6 +326,31 @@ react-button { "style" {
 ::Contract[]{name="Diary" function="getDetialsByDate" input="getByDate" output="result"}
 
 ::Text[Result: @v]{label="result"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  
+
+
+
+
+
+
+
+
+
+
 
 
 
