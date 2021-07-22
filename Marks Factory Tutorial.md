@@ -1,3 +1,5 @@
+Unused code:
+
 ```
 
 <globalstyles:(set-style {
@@ -273,6 +275,122 @@
 
 ```
 
+```
+<tool1:(react-div {"style" {"display" "flex"} } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "more" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Load a recommended mark"
+       )      
+)  )>
+
+<tool2:(react-div {"style" {"display" "flex" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "edit" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Enter 'edit' mode"
+       )      
+)  )>
+
+<tool3:(react-div {"style" {"display" "flex" "flexGrow" "1" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "play" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Enter 'play' mode. This is how your mark is presented to the user."
+       )      
+)  )>
+
+
+<tool4:(react-div {"style" {"display" "flex" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "export" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "50px"                      
+       }
+        } "Export your mark to IPFS. If your mark uses contract ABIs and addresses from your workspace, they will also be exported. You will see a QRcode image and if you click on it, the URL will be copied to the clipboard. You can preset form inputs by filling them in and then exporting."
+       )      
+)  )>
+
+
+<tool5:(react-div {"style" {"display" "flex" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "eth" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Load a contract function form, from the ABIs and addresses saved in the workspace."
+       )      
+)  )>
+
+<tool6:(react-div {"style" {"display" "flex" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "component" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Load a user interface component or command"
+       )      
+)  )>
+
+<tool7:(react-div {"style" {"display" "flex" "marginTop" "10px" } } (list 
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "bold" "width" "48px" }))
+      (react-button {"style" {"marginLeft" "20px"}} (react-icon-our {"title" "deindent" "width" "48px" }))
+      (react-text { "style" {
+                            "position" "relative"
+                            "top" "10px"
+                            "fontSize" "20px"
+                            "fontWeight" "bold"
+                            "color" "black"
+                            "fontFamily" "cursive"
+                            "marginLeft" "20px"                      
+       }
+        } "Markdown syntax helpers. see "
+       )  
+      (react-link { "style" {
+                    "position" "relative"
+                     "fontSize" "20px"
+                     "color" "black"
+                     "marginTop" "30px"
+      }  "src" (str "https://guides.github.com/features/mastering-markdown/") } "https://guides.github.com/features/mastering-markdown/" )
+)  )>
+
+```
 
 
 
