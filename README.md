@@ -493,7 +493,12 @@ Taylor is a lisp like functional language.With Taylor you can build amazing mark
 ```
  
  
+ 14.Adding Icons
  
+  ```
+  (react-button {} (react-icon-our {"title" "more" "size" 40})) for the native icons. 
+  But (react-button {} (react-icon {"src" "URL" "size" 40})) for any url
+  ```
  
  
  
