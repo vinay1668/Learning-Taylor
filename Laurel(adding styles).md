@@ -4,6 +4,8 @@
 
 
 
+
+
 <globalstyles:(set-style {
 "MarkdownPreview" {
    "background-image" "url('https://c4.wallpaperflare.com/wallpaper/304/196/925/yellow-green-pastel-blur-wallpaper-preview.jpg')"
@@ -627,7 +629,7 @@
   )
   (react-div {} (list
     (react-div {"key" 1} (list
-      (react-text {"key" 11 "style" {"fontSize" "20px" "color" "blue"}} "Vote")
+      (react-text {"key" 11 "style" {"color" "blue" "fontSize" "25px" "fontFamily" "cursive"}} "Vote")
       (react-div {"key" 12} (list
         (watch
           ["currentVotingOptions"]
@@ -635,7 +637,16 @@
               options (get-state "currentVotingOptions")
               initstate (set-state "selectedOption" 0)
             )
-            (react-select {
+            (react-select { "style" {
+            								             "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                        "marginBottom" "10px"
+            }
               "key" 122
               "options" options
               "onChange" (fn* (val)
@@ -648,10 +659,20 @@
         (react-input {
           "key" 13
           "placeholder" "amount: number"
-          "style" {"marginLeft" "10px"}
+          "style" {
+          										         "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                }
           "onChange" (fn* (val) (set-state "voteAmount" val))
         })
-        (react-Contract {
+        (react-Contract { "style" {
+                                    "color" "blue"
+        }
           "key" 14
           "name" "TheLaurel"
           "function" "awardLaurels"
@@ -681,10 +702,18 @@
             )
           )
           (react-div {"key" 3} (list
-            (react-text {"key" 31 "style" {"fontSize" "20px"}} "Claim Task")
+            (react-text {"key" 31 "style" {"fontSize" "25px" "color" "blue" "fontFamily" "cursive"}} "Claim Task")
             (react-div {"key" 32} (list
-              (react-span {"key" 1} "Beneficiary: ")
-              (react-select {
+              (react-span {"key" 1  "style" {"fontSize" "18px" "color" "blue" "fontFamily" "cursive"} } "Beneficiary: ")
+              (react-select { "style" {
+              								           "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+              }
                 "key" (str 2 (get-state "selectedTask"))
                 "defaultValue" (get-state "claimBeneficiary")
                 "options" volunteersData
@@ -693,27 +722,64 @@
                 )
               })
             ))
-            (react-div {"key" 33} (list
-              (react-span {"key" 331} "Select proof: ")
-              (react-select {
+            (react-div {"key" 33 "style" {"marginTop" "20px"}} (list
+              (react-span {"key" 331 "style" {
+             	 			"color" "blue" 
+            	 			 "fontSize" "18px"
+             				 "fontFamily" "cursive" 
+              }} "Select proof: ")
+              (react-select { "style" {
+                 										"width" "700px"
+              											  "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+              }
                 "key" (str 332 (get-state "selectedTask"))
                 "options" prs
                 "onChange" (fn* (val)
                   (set-state "claimOptionId" (if (nil? val) nil (optionid val)))
                 )
-              })
-              (react-span {"key" 333} " or URL ")
-              (react-input {
+              })       
+            ))          
+            (react-div {"style" {"marginTop" "20px"}} (list
+                      (react-span {"key" 333 "style" {
+                      "color" "blue" 
+                      "fontSize" "18px" 
+                      "fontFamily" "cursive"
+                      } }  "(or) url ")
+              (react-input { "style" {
+              						                 		"width" "700px"
+              											  "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+              }
                 "key" (str 334 (get-state "selectedTask"))
                 "placeholder" "url"
                 "onChange" (fn* (val)
                   (set-state "claimOptionId" (if (nil? val) nil (optionid val)))
                 )
               })
-            ))
-            (react-div {"key" 34} (list
-              (react-span {"key" 341} "Amount: ")
-              (react-input {
+              ))    
+            (react-div {"key" 34 "style" {"marginTop" "20px" "marginBottom" "10px"}  } (list
+              (react-span {"key" 341 "style" {"fontSize" "18px" "fontFamily" "cursive" "color" "blue"} } "Amount: ")
+              (react-input { "style" {
+              							              		"width" "400px"
+              											  "backgroundColor" "blue"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+              }
                 "key" (str 342 claimAmountDefault)
                 "defaultValue" claimAmountDefault
                 "placeholder" "amount: number"
@@ -749,6 +815,19 @@
   )
   true
 )>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
