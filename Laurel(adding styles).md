@@ -1,5 +1,3 @@
-
-## InCompleted Code
 ```
 
 
@@ -404,7 +402,7 @@
                                         } } (str  selectedTask) )               
                                         ) )                                     
           (react-link {"key" 1  "style" {
-          										                                                   "color" "black"
+          										                          "color" "black"
                                                                         "paddingRight" "15px"
                                                                         "color" "black"
                                                                         "fontFamily" "cursive"
@@ -1111,9 +1109,8 @@
 
 
 ::a[]{id="registerTask"}
-## Register Task
 
-
+::Text[Register Task]{class="subHeading"}
 <newTaskInfo:(watch ["widthfirst"] (fn* ()
 (react-div {"style" (if (get-state "widthfirst") {"display" "flex"} {}) } (list
   (if true
@@ -1163,46 +1160,111 @@
               (set-state "investArbitration" false)
             )
           )
-          (react-div {} (list
+          (react-div {"style" {"marginTop" "100px" "marginLeft" "30px"} } (list
             (react-div {"key" 1} (list
-              (react-span {"key" 12} (str "Organizer: " (get volunteersMap newTaskOrganizer)))
+            (react-span {"key" 11 "style" {				
+                               "color" "blue" 
+            	 			 "fontSize" "18px"
+             				 "fontFamily" "cursive" 
+            } } "Organizer: ")
+              (react-span {"key" 12 "style" {
+              								"color" "black"                                         
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "40px"
+                                                        "marginRight" "10px"
+                                                        "marginTop" "0px"
+                                                        "fontSize" "23px"
+                                                        "marginLeft" "18px"
+              }} (str  (get volunteersMap newTaskOrganizer)))
             ))
-            (react-div {"key" 2} (list
-              (react-span {"key" 21} "GitHub issue: ")
-              (react-select {
+            (react-div {"key" 2 "style" {"marginTop" "15px"}} (list
+              (react-span {"key" 21 "style" {
+              				 "color" "blue" 
+            	 			 "fontSize" "18px"
+             				 "fontFamily" "cursive"                        
+              }} "GitHub issue: ")
+              (react-select { "style" {
+              						                 	"width" "700px"
+              											  "backgroundColor" "gray"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                        "marginLeft" "35px"
+              }
                 "key" 22
                 "options" issues
                 "onChange" (fn* (val)
                   (set-state "newTaskId" (if (nil? val) nil (taskid val)))
                 )
               })
-              (react-span {"key" 23} " or URL ")
-              (react-input {
+              (react-div {"key" 133 "style" {"marginTop" "15px"}} (list
+              (react-span {"key" 23 "style" {
+              				 "color" "blue" 
+            	 			 "fontSize" "18px"
+             				 "fontFamily" "cursive"    
+              }} " (or) url ")
+              (react-input { "style" {
+              										      "width" "700px"
+              											  "backgroundColor" "gray"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                        "marginLeft" "90px"
+}
                 "key" 24
                 "placeholder" "url"
                 "onChange" (fn* (val)
                   (set-state "newTaskId" (if (nil? val) nil (taskid val)))
                 )
               })
+              ))
             ))
-            (react-div {"key" 3} (list
-              (react-select {
+            (react-div {"key" 3 "style" {"marginTop" "15px" } } (list
+              (react-select {"style" {
+      								      				"backgroundColor" "gray"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                        "marginBottom" "10px"
+                                                        "width" "100px"
+      }
                 "key" 31
                 "options" (get-state "laurelsData")
                 "onChange" (fn* (val)
                   (set-state "newTaskLaurelid" val)
                 )
               })
-              (react-input {
+              (react-input {"style" {
+              				      						"backgroundColor" "gray"
+                                                        "color" "black"
+                                                        "fontFamily" "cursive"
+                                                        "fontWeight" "bold"
+                                                        "paddingRight" "10px"
+                                                        "paddingLeft" "10px"
+                                                        "marginRight" "10px"
+                                                        "marginBottom" "10px"
+                                                        "width" "100px"
+              }
                 "key" 32
                 "placeholder" "amount: mLaurels"
                 "defaultValue" 1000
                 "onChange" (fn* (val) (set-state "newTaskLaurelAmount" val))
               })
-              (react-span {"key" 33} " mLaurels")
+              (react-span {"key" 33 "style" {"fontSize" "20px" "color" "black" "fontFamily" "cursive"} } " mLaurels")
             ))
-            (react-div {"key" 4} (list
-              (react-span {"key" 41} "Invest Arbitration Laurels: ")
+            (react-div {"key" 4 "marginTop" "15px"} (list
+              (react-span {"key" 41 "style" {"fontSize" "18px" "color" "blue" "fontFamily" "cursive"} } "Invest Arbitration Laurels: ")
               (react-checkbox {
                 "key" 42
                 "style" {"verticalAlign" "middle" "marginLeft" "5px" "marginRight" "5px"}
@@ -1245,6 +1307,24 @@
   ))
 )>
 
+::br[]{}
+
+::a[]{id="registerVolunteer"}
+
+::Text[Volunteer Registration Process]{class="subHeading"}
+- fill in this :Link[form with email registration]{src="https://forms.gle/bdtrUTSEGuL2dtys9"}
+- you will receive access to our Discord chat
+- create an Ethereum address, get Rinkeby ETH - :Link[try this Rinkeby faucet]{src="https://faucet.rinkeby.io/"}
+- find an already registered volunteer to be your ancestor and give them your Ethereum address, so they can register it in the form below
+- get access to the-laurel-volunteers GitHub repo & more
+
+
+::Text[Register a volunteer with you as the ancestor:]{class="subHeading"}
+::Contract[]{name="TheLaurel" function="registerVolunteer" output="registerVolunteerReceipt"}
+
+::br[]{}
+::br[]{}
+::br[]{}
 
 
 
