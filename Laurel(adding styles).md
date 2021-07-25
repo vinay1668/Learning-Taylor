@@ -1,3 +1,6 @@
+
+[Link to the Laurel Mark with styling added by me](https://marks.provable.dev/?ipfs=QmR7MYigGp8Sh2AX6Y1w4SyMZXNWR5KgCu79FThgQ2NF8U&input=%7B%22instanceData%22%3A%22Cannot%20read%20property%20'toHexString'%20of%20null%22%2C%22voteStatus%22%3A%22Cannot%20read%20property%20'toHexString'%20of%20null%22%2C%22voteWinner%22%3A%22Cannot%20read%20property%20'toHexString'%20of%20null%22%2C%22laurelDecimals%22%3A%7B%22_hex%22%3A%220x03%22%2C%22_isBigNumber%22%3Atrue%7D%7D)
+
 ```
 
 
@@ -56,7 +59,7 @@
                   "font-size" "20px"
         }
          "commonStyle3" {
-              	 "padding-left" "30px"
+              	 "padding-left" "40px"
                   "font-size" "20px"
         }
         "uncommonStyle" {
@@ -90,6 +93,26 @@
         "react" {
              "color" "black"
         }
+        "grid line" {
+ 							 "stroke" "#2C2E43"
+ 							 "stroke-width" "1px"
+ 			}
+            "axis line" {
+ 				"stroke" "black"
+ 				 "stroke-width" "3px"
+				}
+                "axis text" {
+ 					 "fill" "blue"
+ 					 "stroke-width" "1px"
+                     "font-size" "10px"
+                     "font-weight" "bold"
+				}
+                "axis text.label" {
+              		 "font-size" "15px"
+			}
+            "axis path.arrow" {
+    "fill" "black"
+}
     }
 )>
 
@@ -1343,6 +1366,31 @@
 ::br[]{}
 ::br[]{}
 ::br[]{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
