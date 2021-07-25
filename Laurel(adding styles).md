@@ -33,6 +33,13 @@
                             "font-family" "cursive"
                             "margin-left" "0px"
         }
+       "subsubHeading" {
+                            "font-size" "20px"
+                            "font-weight" "bold"
+                             "color" "blue"
+                            "font-family" "cursive"
+                            "margin-left" "0px"
+        }
         "commonStyle" {
             "color" "black"
             "font-weight" "bold"
@@ -42,12 +49,15 @@
         }
         "commonStyle1" {
               	 "padding-left" "80px"
+                  "font-size" "20px"
         }
         "commonStyle2" {
               	 "padding-left" "70px"
+                  "font-size" "20px"
         }
          "commonStyle3" {
               	 "padding-left" "30px"
+                  "font-size" "20px"
         }
         "uncommonStyle" {
              "color" "black"
@@ -55,6 +65,12 @@
             "font-size" "25px"
             "font-family" "cursive"
             "margin-left" "20px"
+        }
+        "no" {
+        		"color" "black"
+                "font-family" "cursive"
+                "font-size" "20px"
+                "opacity" 0.5
         }
         "iconStyle" {
             "margin-left" "20px"
@@ -387,7 +403,7 @@
                                                                         "paddingRight" "15px"
                                                                         "color" "blue"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "25px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
                                                                         "paddingRight" "110px"
                                         } } "Task: " ) 
@@ -396,7 +412,7 @@
                                                                         "paddingRight" "15px"
                                                                         "color" "black"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "23px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
                                                                         "fontWeight" "bold"
                                         } } (str  selectedTask) )               
@@ -416,7 +432,7 @@
                                                                         "paddingRight" "15px"
                                                                         "color" "blue"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "25px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
                                                                         "paddingRight" "50px"
                                         } } "Organizer: " ) 
@@ -424,7 +440,7 @@
                							 "paddingRight" "15px"
                                                                         "color" "black"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "23px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
         }} (str  (get volunteersMap (nth currentTask 0))) )  
         )
@@ -435,7 +451,7 @@
                                                                         "paddingRight" "15px"
                                                                         "color" "blue"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "25px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
                                                                         "paddingRight" "80px"
                                         } } "Laurels: " ) 
@@ -443,7 +459,7 @@
           {"key" 3 "style" {
                                                                         "color" "black"
                                                                         "fontFamily" "cursive"
-                                                                        "fontSize" "23px"
+                                                                        "fontSize" "20px"
                                                                         "marginTop" "0px"
           }}
           (str
@@ -488,10 +504,10 @@
 
 ::br[]{}
 ::br[]{}
-:Span[Winner:]{class="subHeading"} :Span[@v]{label=voteWinner class="commonStyle commonStyle1"}
-:Span[option @[1]:]{class="subHeading" label=voteStatus} :Span[@[3] vote weight]{label=voteStatus class="commonStyle commonStyle2"}
-:Span[option @[2]:]{class="subHeading" label=voteStatus} :Span[@[4] vote weight]{label=voteStatus class="commonStyle commonStyle2"}
-:Span[vote status: ]{label=voteStatus class="subHeading"} :Span[ @[0] ]{label=voteStatus class="commonStyle commonStyle3"}
+:Span[Winner:]{class="subsubHeading"} :Span[@v]{label=voteWinner class="commonStyle commonStyle1"}
+:Span[option @[1]:]{class="subsubHeading" label=voteStatus} :Span[@[3] vote weight]{label=voteStatus class="commonStyle commonStyle2"}
+:Span[option @[2]:]{class="subsubHeading" label=voteStatus} :Span[@[4] vote weight]{label=voteStatus class="commonStyle commonStyle2"}
+:Span[vote status: ]{label=voteStatus class="subsubHeading"} :Span[ @[0] ]{label=voteStatus class="commonStyle commonStyle3"}
 
 
 
@@ -819,9 +835,11 @@
 )>
 
 
+
 * circles - momentary voting outcome (x,y)
 * the white vote line - dynamic change of the votes
 * the grey lines are thresholds for different events
+
 
 ::br[]{}
 ::br[]{}
