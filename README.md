@@ -1,38 +1,5 @@
 # Learning-Taylor
 
-## Basic functions
-1.square root function (sqrt)
-```
-(def! sqrt (fn* (num)
-      ( println (* num num) )
-   )
-)
-```
-2.Modulo operation function(mod)
-```
-(def! mod (fn* (a b) 
-    (println     (- a (number(* b (number(/ a b)) ) ) ) )
-  ))  
-```
-3.Getting absolute value of a variable (abs)
-```
-(def! abs (fn* (num)
-      (if (< num 0)
-         (println "The absolute value of a is " (* num -1))
-         (println "The absolute value of a is " num)
-        
-      )
-   ))
-```
-4.function to check if two number are equal or not.
-```
-(def! check (fn* (a b)
-      (if (= a b)
-            (println "The numbers are equal")
-              (println "The numbers are not equal")  
-)
-   ))
-```
 
 ## Examples
 1.A Simple button that change the text to pre-defined value or string.
@@ -502,6 +469,39 @@ Taylor is a lisp like functional language.With Taylor you can build amazing mark
  
  
  
- 
+ ## Basic functions
+1.square root function (sqrt)
+```
+(def! sqrt (fn* (num)
+      ( println (* num num) )
+   )
+)
+```
+2.Modulo operation function(mod)
+```
+(def! mod (fn* (a b) 
+    (println     (- a (number(* b (number(/ a b)) ) ) ) )
+  ))  
+```
+3.Getting absolute value of a variable (abs)
+```
+(def! abs (fn* (num)
+      (if (< num 0)
+         (println "The absolute value of a is " (* num -1))
+         (println "The absolute value of a is " num)
+        
+      )
+   ))
+```
+4.function to check if two number are equal or not.
+```
+(def! check (fn* (a b)
+      (if (= a b)
+            (println "The numbers are equal")
+              (println "The numbers are not equal")  
+)
+   ))
+```
+
  
  
